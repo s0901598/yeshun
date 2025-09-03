@@ -1,1 +1,10 @@
-<p>processflow works!</p>
+<div class="flow-card" *ngFor="let item of ccitems; let i = index"  >
+    <div class="flow-number" > {{ i + 1 }} </div>
+    <div class="vertical-line"></div>
+    <div class="icons">
+        <div class="icon"><span style="font-size: 20px;"><i class="fa-solid fa-wrench"></i></span></div>
+    </div>
+    <div class="text">
+        Lorem Ipsum is simply dummy text of the text printing and typesetting industry. Lorem Ipsum
+    </div>
+</div>

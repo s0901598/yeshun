@@ -1,1 +1,28 @@
-<p>photodetail works!</p>
+<div class="photodetail-container">
+    <div class="nav">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="photodetail-content">
+      
+      <div class="photos">
+        <img *ngFor="let photo of photos" [src]="photo.url" [alt]="photo.alt">
+      </div>
+      <div class="statement">
+        <div class="title">
+          業順
+        </div>
+        <div class="content">
+          作品敘述<br><br> <!-- 添加一些內容以測試滾動 -->
+          這是一個關於業順營造的作品介紹，展示我們的設計與施工成果。以下是詳細內容：<br><br>
+          - 項目一：住宅空間<br>
+          - 項目二：商業空間<br>
+          - 項目三：辦公空間<br><br>
+          更多資訊請繼續滾動查看。
+        </div>
+      </div>
+    </div>
+    <div class="photodetail-footer">
+        <app-footer></app-footer>
+      <div class="copyright">©2025 ye-shun company copyright</div>
+    </div>
+  </div>

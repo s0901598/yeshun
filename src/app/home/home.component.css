@@ -61,7 +61,7 @@
     content: "";
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 20px;
     transform: translateY(-50%);
     border-top: 0.8125rem solid transparent;
     border-bottom: 0.8125rem solid transparent;
@@ -107,12 +107,13 @@
 }
   
   
-  .home-footer {
+.home-footer {
     width: 100%;
     padding: 0;
     text-align: center;
     color: #ffffff;
-    background-color: #1a1a1a;
+    background:  #2B2B2B;
+    /* background:linear-gradient(to bottom, #3B4045, #2B2B2B); */
   }
   
   .copyright {

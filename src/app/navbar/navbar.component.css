@@ -2,11 +2,29 @@
   display: flex;
   width: 100%;
   text-align: left;
-  position: relative;
+  /* position: relative; */
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
   box-sizing: border-box;
+  position: fixed; /* 固定在頂部 */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* 確保導航欄在最上層 */
+  background: transparent; /* 初始透明背景 */
+  transition: background-color 0.7s ease-in-out; /* 背景色漸變效果 */
+  box-shadow:10px 10px -6px ;
+}
+.navbar.scrolled {
+  background: rgba(64, 63, 63, 0.7); /* 半透明灰色背景 */
+  
+}
+.navbar.scrolled .title {
+  color: whitesmoke;
+}
+.navbar.scrolled .item>a{
+  color: whitesmoke; 
+
 }
 
 .navlogo {
@@ -28,6 +46,7 @@
   font-weight: 500;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
+
 
 .item {
   display: flex;

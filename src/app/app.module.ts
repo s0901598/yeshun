@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -11,6 +10,7 @@ import { PhotodetailComponent } from './photodetail/photodetail.component';
 import { ProcessComponent } from './process/process.component';
 import { ProcessflowComponent } from './processflow/processflow.component';
 import { ContactComponent } from './contact/contact.component';
+import { ImagecardComponent } from './imagecard/imagecard.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { ContactComponent } from './contact/contact.component';
     PhotodetailComponent,
     ProcessComponent,
     ProcessflowComponent,
-    ContactComponent
+    ContactComponent,
+    ImagecardComponent
   ],
   imports: [
     BrowserModule,

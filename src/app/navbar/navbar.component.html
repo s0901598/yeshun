@@ -1,4 +1,4 @@
-<div class="navbar">
+<div class="navbar" [ngClass]="{'scrolled': isScrolled}">
   <div class="navlogo">
     <img src='../../assets/images/nobg.png' alt="">
     <div class="title">
@@ -6,18 +6,10 @@
     </div>
   </div>
   <div class="item">
-    <div class="nav_item">
-      HOME
-    </div>
-    <div class="nav_item">
-      PROTFOLIO
-    </div>
-    <div class="nav_item">
-      PROCESS
-    </div>
-    <div class="nav_item">
-      CONTACT
-    </div>
+    <a class="nav_item" href="#">HOME</a>
+    <a class="nav_item" href="#">PROTFOLIO</a>
+    <a class="nav_item" href="#">PROCESS</a>
+    <a class="nav_item" href="#">CONTACT</a>
   </div>
 
 </div>

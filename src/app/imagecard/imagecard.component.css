@@ -1,0 +1,81 @@
+.image-card {
+    position: relative;
+    width: 350px;
+    height: 300px; /* 可根據需求調整 */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 8px; /* 可選：與圖片風格一致 */
+    margin: 10px;
+   
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    transition:background-color 0.9s  ease; /* 漸變效果 */
+  
+  }
+  
+  .image-card:hover .overlay {
+    background: linear-gradient( rgba(0, 0, 0,0));
+    transition:background-color 0.6s  ease-in; /* 漸變效果 */
+  }
+  .image-card:hover .content {
+    opacity: 0; /* 懸停時文字消失 */
+  }
+  
+  
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+  }
+  
+  .content h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* 提升可讀性 */
+  }
+  
+  .content p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+    color: #d4af37; /* 類似圖片中金棕色 */
+    margin: 0.5rem 0 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* 響應式設計 */
+  @media (max-width: 768px) {
+    .image-card {
+      height: 300px;
+    }
+    .content h2 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+    }
+    .content p {
+      font-size: clamp(0.875rem, 2vw, 1.25rem);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .image-card {
+      height: 200px;
+    }
+    .content h2 {
+      font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+    }
+    .content p {
+      font-size: clamp(0.75rem, 1.8vw, 1rem);
+    }
+  }
