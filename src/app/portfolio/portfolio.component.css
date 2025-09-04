@@ -47,6 +47,7 @@
     justify-content: center;
     flex-wrap: wrap; /* 桌面版允許換行 */
     gap: 20px; /* 卡片間距 */
+    
   }
 
   .copyright {

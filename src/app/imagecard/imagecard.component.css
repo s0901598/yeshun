@@ -1,6 +1,6 @@
 .image-card {
     position: relative;
-    width: 350px;
+    width: 400px;
     height: 300px; /* 可根據需求調整 */
     background-size: cover;
     background-position: center;
@@ -56,6 +56,12 @@
   }
   
   /* 響應式設計 */
+  @media(max-width:1920px) {
+    .image-card {
+      height: 300px;
+      width: 400px;
+    }
+  }
   @media (max-width: 768px) {
     .image-card {
       height: 300px;
