@@ -40,10 +40,13 @@
       transform: scale(1); /* 回到原始尺寸，形成呼吸效果 */
     }
   }
-  .companywork{
+
+  .companywork {
     display: flex;
     margin-top: 40px;
     justify-content: center;
+    flex-wrap: wrap; /* 桌面版允許換行 */
+    gap: 20px; /* 卡片間距 */
   }
 
   .copyright {
@@ -55,6 +58,7 @@
     justify-content: center;
     font-size: clamp(0.875rem, 2vw, 1rem);
   }
+
   .portfolio-content {
     flex: 1;
     padding: 2rem;
@@ -82,20 +86,14 @@
     border-left: 0.8125rem solid rgb(195, 162, 127);
   }
   
-  
-  
   .content_middle {
     padding: 0.625rem 0.625rem 0.625rem 2.5rem;
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     color: rgb(195, 162, 127);
   }
-  
 
-
-
-
- /* 響應式設計 */
- @media (max-width: 768px) {
+  /* 響應式設計 */
+  @media (max-width: 768px) {
     .nav {
       height: 200px;
     }
@@ -109,7 +107,24 @@
     .content_middle {
       padding-left: 1.5rem;
     }
-   
+    .companywork {
+      flex-direction: row; /* 手機版水平排列 */
+      flex-wrap: nowrap; /* 禁止換行 */
+      overflow-x: auto; /* 啟用水平滾動 */
+      overflow-y: hidden; /* 隱藏垂直滾動條 */
+      justify-content: flex-start; /* 從左開始排列 */
+      padding: 0 1rem; /* 左右邊距 */
+      scroll-behavior: smooth; /* 平滑滾動 */
+      -webkit-overflow-scrolling: touch; /* 提升手機滑動體驗 */
+      gap:20px
+    }
+    .companywork::-webkit-scrollbar {
+      display: none; /* 隱藏滾動條 */
+    }
+    .companywork > * {
+      flex-shrink: 0; /* 防止卡片壓縮 */
+      width: 300px; /* 固定卡片寬度，適配手機 */
+    }
   }
   
   @media (max-width: 480px) {
@@ -123,18 +138,20 @@
     .nav::before {
       animation: owl 10s ease-in-out infinite; /* 手機上縮短動畫時間 */
     }
+    .companywork > * {
+      width: 250px; /* 小螢幕下縮小卡片寬度 */
+    }
   }
 
-.portfolio-footer {
+  .portfolio-footer {
     width: 100%;
     padding: 0;
     text-align: center;
     color: #ffffff;
-    background:  #2B2B2B;
-    /* background:linear-gradient(to bottom, #3B4045, #2B2B2B); */
+    background: #2B2B2B;
   }
   
-.copyright {
+  .copyright {
     background-color: #3b4045;
     color: whitesmoke;
     height: 3.125rem;
