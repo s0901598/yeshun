@@ -1,1 +1,58 @@
-<p>contact works!</p>
+<div class="contact-container">
+    <div class="nav">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="contact-content">
+        <div class="content_title">
+            <div class="contactus">
+                <div class="contacearea">
+                <p class="title">聯絡業順</p> <br>
+                <h5> 服務範圍</h5>
+                <div class="contact_item"  *ngFor="let contact of contacts" >{{contact.item}}</div>
+                
+                </div>
+                <div class="contaceform">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSczcysq0SqbW7V28PS6l5NBgDI3leBOIloqb8zPaWc7GpOaZw/viewform?embedded=true" width="450" height="450" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+                </div>           
+            </div>
+            <hr>
+            <div class="joinus">
+                <div class="joinusarea">
+                <p class="title">加入業順</p> <br>
+                <div class="join_title"  *ngFor="let join of joins">{{join.subtitle}}</div>
+                <div class="join_item"  *ngFor="let join of joins">
+                    {{join.item}}
+                </div>
+                </div>
+                <div class="joinform">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSczcysq0SqbW7V28PS6l5NBgDI3leBOIloqb8zPaWc7GpOaZw/viewform?embedded=true" width="450" height="700" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+                </div>
+                
+
+            </div>
+       
+        </div>
+       
+      
+      <!-- <div class="photos">
+        <img *ngFor="let photo of photos" [src]="photo.url" [alt]="photo.alt">
+      </div>
+      <div class="statement">
+        <div class="title">
+          業順
+        </div>
+        <div class="content">
+          作品敘述<br><br>
+          這是一個關於業順營造的作品介紹，展示我們的設計與施工成果。以下是詳細內容：<br><br>
+          - 項目一：住宅空間<br>
+          - 項目二：商業空間<br>
+          - 項目三：辦公空間<br><br>
+          更多資訊請繼續滾動查看。
+        </div>
+      </div> -->
+    </div>
+    <div class="contact-footer">
+        <app-footer></app-footer>
+      <div class="copyright">©2025 ye-shun company copyright</div>
+    </div>
+  </div>
