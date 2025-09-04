@@ -8,7 +8,7 @@
     width: 500px;
     height: 150px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
+    margin-top: 40px;
 }
 .flow-number {
     color: rgb(195, 162, 127);
@@ -57,3 +57,8 @@
     font-size: 18px;
     color: rgb(213, 220, 227);
 }
+@media (max-width: 480px) {
+   .flow-card{
+    width: 88%;
+   }
+  }

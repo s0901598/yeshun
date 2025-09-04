@@ -15,12 +15,12 @@
   }
   
   .footer_logo {
-    text-align: right;
-    width: 50%;
+    text-align: center;
+    width: 40%;
   }
   
   .footer_logo > img {
-    max-width: 50%;
+    max-width: 60%;
     height: auto;
   }
   
@@ -37,9 +37,19 @@
   }
   
   /* 響應式設計 */
+
+   @media (max-width:1920px){
+   .footer{
+    display: flex;
+    justify-content: center;
+  }
+}
   @media (max-width: 768px) {
     .footer {
-      padding: 2.5%;
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      padding-top: 50px;
     }
     .footer_left {
       flex-direction: column;
@@ -51,7 +61,7 @@
       width: 100%;
     }
     .footer_logo > img {
-      max-width: 40%;
+      max-width: 50%;
     }
     .footer_info {
       width: 100%;
@@ -61,10 +71,19 @@
   }
   
   @media (max-width: 480px) {
+    .footer {
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      padding-top: 50px;
+    }
     .footer_logo > img {
-      max-width: 30%;
+      width: 50%;
+      display: none;
     }
     .footer_info > p {
-      font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+      font-size: 18px;
+      text-align: center;
+
     }
   }

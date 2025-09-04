@@ -1,15 +1,34 @@
-<div class="navbar" [ngClass]="{'scrolled': isScrolled}">
+<!-- <div class="navbar" [ngClass]="{'scrolled': isScrolled}">
   <div class="navlogo">
     <img src='../../assets/images/nobg.png' alt="">
     <div class="title">
         業 順 營 造
     </div>
   </div>
-  <div class="item">
+  <div class="item" >
     <a class="nav_item" href="#">HOME</a>
     <a class="nav_item" href="#">PROTFOLIO</a>
     <a class="nav_item" href="#">PROCESS</a>
     <a class="nav_item" href="#">CONTACT</a>
   </div>
 
+</div> -->
+<div class="navbar" [ngClass]="{'scrolled': isScrolled}">
+  <div class="navlogo">
+    <img src="../../assets/images/nobg.png" alt="Logo">
+    <h1 class="title">業順營造</h1>
+  </div>
+  <!-- 漢堡圖標 -->
+  <button class="hamburger" [ngClass]="{'active': isMenuOpen}" (click)="toggleMenu()" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <!-- 導航項目 -->
+  <div class="item" [ngClass]="{'active': isMenuOpen}">
+    <a class="nav_item" href="#home" (click)="closeMenu()">HOME</a>
+    <a class="nav_item" href="#portfolio" (click)="closeMenu()">PORTFOLIO</a>
+    <a class="nav_item" href="#process" (click)="closeMenu()">PROCESS</a>
+    <a class="nav_item" href="#contact" (click)="closeMenu()">CONTACT</a>
+  </div>
 </div>

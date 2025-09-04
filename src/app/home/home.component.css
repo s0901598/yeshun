@@ -3,6 +3,7 @@
     flex-direction: column;
     min-height: 100vh;
     box-sizing: border-box;
+   
   }
   
   .nav {
@@ -54,7 +55,7 @@
     font-family: "Microsoft JhengHei", Arial, sans-serif;
     position: relative;
     padding-left: 2rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
   }
   
   .content_title::before {
@@ -67,21 +68,29 @@
     border-bottom: 0.8125rem solid transparent;
     border-left: 0.8125rem solid rgb(195, 162, 127);
   }
-  
+  .title{
+    padding-bottom: 20px;
+  }
   .about {
     line-height: 2.5em;
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-size: 25px;
     padding-left: 1rem;
   }
   
   .content_middle {
     padding: 0.625rem 0.625rem 0.625rem 2.5rem;
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-size: 20px;
     color: rgb(195, 162, 127);
+    
   }
+   .content_middle>p{
+      padding-bottom: 25px;
+    }
   
   .company_create {
-    padding-left: 2rem;
+    width: 90%;
+    margin: 0 auto;
+    
     font-family: "Microsoft JhengHei", Arial, sans-serif;
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     font-weight: 500;
@@ -101,7 +110,8 @@
 
 .company_env img {
   max-width: 45%; /* 每張圖片佔據不超過一半寬度 */
-  height: auto;
+  width: 540px;
+  height: 360px;
   object-fit: cover;
   border-radius: 8px; /* 可選：添加圓角 */
 }
@@ -127,10 +137,23 @@
   }
   
   /* 響應式設計 */
+
+   @media (max-width:1920px){
+   .content_title{
+    width: 80%;
+    margin: 0 auto;
+   }
+   .company_create{
+     width: 75%;
+    margin: 0 auto;
+    line-height: 3rem;
+   }
+  }
   @media (max-width: 768px) {
     .nav {
       height: 200px;
     }
+  
     .home-content {
       padding: 1rem;
       font-size: clamp(1.25rem, 3.5vw, 1.5rem);
@@ -150,9 +173,37 @@
     .nav {
       height: 150px;
     }
+    .title{
+      font-size: 28px;
+    }
+    .about{
+      padding-top: 20px;
+      font-size: 23px;
+    }
+    .content_middle>p{
+      padding-bottom: 25px;
+    }
+    .company_env img{
+      width: 100%;
+      height: 200px;
+    }
     .home-content {
+      display: flex;
+      flex-wrap: wrap;
       padding: 0.5rem;
       font-size: clamp(1rem, 3vw, 1.25rem);
+    }
+     .company_create{
+      text-align: center;
+      padding-top: 20px;
+     }
+   
+    .company_env{
+    display: flex;
+   flex-direction: column;
+    }
+    .company_env>img{
+      max-width: 90%;
     }
     .nav::before {
       animation: owl 10s ease-in-out infinite; /* 手機上縮短動畫時間 */

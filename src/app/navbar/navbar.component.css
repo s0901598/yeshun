@@ -2,29 +2,30 @@
   display: flex;
   width: 100%;
   text-align: left;
-  /* position: relative; */
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
   box-sizing: border-box;
-  position: fixed; /* 固定在頂部 */
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; /* 確保導航欄在最上層 */
-  background: transparent; /* 初始透明背景 */
-  transition: background-color 0.7s ease-in-out; /* 背景色漸變效果 */
-  box-shadow:10px 10px -6px ;
+  z-index: 1000;
+  background: transparent;
+  transition: background-color 0.7s ease-in-out;
+  box-shadow: 10px 10px -6px;
 }
+
 .navbar.scrolled {
-  background: rgba(64, 63, 63, 0.7); /* 半透明灰色背景 */
-  
+  background: rgba(64, 63, 63, 0.7);
 }
-.navbar.scrolled .title {
+
+.navbar.scrolled .title,
+.navbar.scrolled .nav_item {
   color: whitesmoke;
 }
-.navbar.scrolled .item>a{
-  color: whitesmoke; 
-
+.navbar.scrolled .title,
+.navbar.scrolled .nav_item:hover {
+  color: #c3a27f;
 }
 
 .navlogo {
@@ -47,7 +48,6 @@
   font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
-
 .item {
   display: flex;
   gap: 1.5rem;
@@ -60,7 +60,6 @@
   color: #2b2b2b;
   text-decoration: none;
   font-size: clamp(1rem, 2.5vw, 1.125rem);
-  
 }
 
 .nav_item:hover {
@@ -68,39 +67,96 @@
   transition: color 0.6s;
 }
 
+/* 漢堡圖標樣式 */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: whitesmoke;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.scrolled .hamburger span {
+  background: whitesmoke;
+}
+
+/* 漢堡圖標展開動畫 */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* 響應式設計 */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     padding: 0.5rem;
   }
   .navlogo {
-    justify-content: center;
-    width: 100%;
+    justify-content: flex-start;
+    width: auto;
     margin-left: 0;
   }
   .item {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    left: 0;
     width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-right: 10px;
+    background: rgba(64, 63, 63, 0.9);
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+  }
+  .item.active {
+    display: flex;
+    transform: translateY(0);
   }
   .nav_item {
-    font-size: clamp(0.875rem, 2vw, 1rem);
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    color: whitesmoke;
+    padding: 0.5rem 0;
+  }
+  .hamburger {
+    display: block;
   }
 }
 
 @media (max-width: 480px) {
+  .title{
+    font-size: 35px;
+    font-weight: 500;
+  }
   .navlogo > img {
     max-width: 3rem;
   }
-  .title {
-    font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+
+  .hamburger {
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+   
+    
   }
-  .item {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+ 
 }
