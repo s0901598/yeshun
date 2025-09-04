@@ -11,6 +11,7 @@ import { ProcessComponent } from './process/process.component';
 import { ProcessflowComponent } from './processflow/processflow.component';
 import { ContactComponent } from './contact/contact.component';
 import { ImagecardComponent } from './imagecard/imagecard.component';
+import { ProcessdetailComponent } from './processdetail/processdetail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ImagecardComponent } from './imagecard/imagecard.component';
     ProcessComponent,
     ProcessflowComponent,
     ContactComponent,
-    ImagecardComponent
+    ImagecardComponent,
+    ProcessdetailComponent
   ],
   imports: [
     BrowserModule,
