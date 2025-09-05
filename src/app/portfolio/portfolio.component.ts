@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
@@ -11,17 +12,16 @@ export class PortfolioComponent implements OnInit {
     { imageUrl: '/assets/images/navbg02.jpg', title: '商業空間', subtitle: 'Commercial Space' },
     { imageUrl: '/assets/images/navbg03.jpg', title: '辦公空間', subtitle: 'Office Space' },
     { imageUrl: '/assets/images/navbg03.jpg', title: '辦公空間', subtitle: 'Office Space' },
-    
-        
 
 
   ];
 
 
-  constructor() { }
+  constructor(private router:Router) { }
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {}
+  navigateToPhotoDetail(imageUrl: string) {
+    this.router.navigate(['/photodetail', encodeURIComponent(imageUrl)]);
   }
 
 }

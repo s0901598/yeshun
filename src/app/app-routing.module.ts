@@ -8,7 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {
-    path:'',redirectTo:'Home/bgpic.jpg',pathMatch:'full'
+    path:'',redirectTo:'home',pathMatch:'full'
   },
   {
     path:'home',component:HomeComponent,
@@ -26,6 +26,8 @@ const routes: Routes = [
   },
   {
     path:'contact',component:ContactComponent,
+  },{
+    path:'photodetail/:imageUrl',component:PhotodetailComponent
   }
 
 ];
