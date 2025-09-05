@@ -27,7 +27,7 @@ const routes: Routes = [
   {
     path:'contact',component:ContactComponent,
   },{
-    path:'photodetail/:imageUrl',component:PhotodetailComponent
+    path:'photodetail/:url',component:PhotodetailComponent
   }
 
 ];

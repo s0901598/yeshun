@@ -6,6 +6,7 @@
       
       <div class="photos">
         <img  *ngIf="selectedPhoto" [src]="selectedPhoto.url" [alt]="selectedPhoto.alt">
+        <div *ngIf="!selectedPhoto" class="no-photo">未找到對應的圖片。</div>
       </div>
       <div class="statement">
         <div class="title">

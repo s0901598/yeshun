@@ -95,9 +95,11 @@
   
   .photos img {
     max-width: 70%;
-    height: auto;
+    width: 400px;
+    height: 400px;
     margin-bottom: 1rem;
     display: block;
+    border-radius: 20px ;
   }
   .photodetail-footer {
     width: 100%;

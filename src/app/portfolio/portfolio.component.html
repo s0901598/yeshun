@@ -8,7 +8,7 @@
             <hr >
         </div>
         <div class="companywork" >
-            <app-imagecard  *ngFor="let work of works" (click)="navigateToPhotoDetail(work.imageUrl)" [imageUrl]="work.imageUrl" [title]="work.title" [subtitle]="work.subtitle"></app-imagecard>
+            <app-imagecard  *ngFor="let work of works"  (click)="navigateToPhotoDetail(work.url)" [imageUrl]="work.imageUrl" [title]="work.title" [subtitle]="work.subtitle"></app-imagecard>
         </div>
     </div>
     <!-- <div class="portfolio-footer">
