@@ -100,6 +100,7 @@
       height: 200px;
     }
     .portfolio-content {
+    
       padding: 1rem;
       font-size: clamp(1.25rem, 3.5vw, 1.5rem);
     }
@@ -135,7 +136,11 @@
     }
     .portfolio-content {
       padding: 0.5rem;
+      padding-top: 20px;
       font-size: clamp(1rem, 3vw, 1.25rem);
+    }
+    .content_title{
+      font-size: 25px;
     }
     .nav::before {
       animation: owl 10s ease-in-out infinite; /* 手機上縮短動畫時間 */
