@@ -4,13 +4,13 @@
     <h1 class="title">業順營造</h1>
   </div>
   <!-- 漢堡圖標 -->
-  <button class="hamburger" [ngClass]="{'active': isMenuOpen}" (click)="toggleMenu()" aria-label="Toggle menu">
+  <button class="hamburger" [class.active]="isMenuOpen" (click)="toggleMenu()" aria-label="Toggle menu">
     <span></span>
     <span></span>
     <span></span>
   </button>
   <!-- 導航項目 -->
-  <div class="item" [ngClass]="{'active': isMenuOpen}">
+  <div class="item" [class.active]="isMenuOpen">
     <a class="nav_item" [routerLink]="['/home']" (click)="closeMenu()">HOME</a>
     <a class="nav_item" [routerLink]="['/portfolio']" (click)="closeMenu()">PORTFOLIO</a>
     <a class="nav_item" [routerLink]="['/process']" (click)="closeMenu()">PROCESS</a>

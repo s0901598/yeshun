@@ -5,24 +5,24 @@
     <div class="contact-content">
         <div class="content_title">
             <div class="contactus">
-                <div class="contacearea">
-                <p class="title">聯絡業順</p> <br>
-                <h5> 服務範圍</h5>
+                <div class="contactarea">
+                  <p class="title">聯絡業順</p> <br>
+                  <div class="servicerange"> 服務範圍</div>
                 <div class="contact_item"  *ngFor="let contact of contacts" >{{contact.item}}</div>
                 
                 </div>
-                <div class="contaceform">
+                <div class="contactform">
                     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSczcysq0SqbW7V28PS6l5NBgDI3leBOIloqb8zPaWc7GpOaZw/viewform?embedded=true" width="450" height="450" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
                 </div>           
             </div>
             <hr>
             <div class="joinus">
                 <div class="joinusarea">
-                <p class="title">加入業順</p> <br>
-                <div class="join_title"  *ngFor="let join of joins">{{join.subtitle}}</div>
-                <div class="join_item"  *ngFor="let join of joins">
-                    {{join.item}}
-                </div>
+                  <p class="title">加入業順</p> <br>
+                  <div class="join_title"  *ngFor="let join of joins">{{join.subtitle}}</div>
+                  <div class="join_item"  *ngFor="let join of joins">
+                      {{join.item}}
+                  </div>
                 </div>
                 <div class="joinform">
                     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSczcysq0SqbW7V28PS6l5NBgDI3leBOIloqb8zPaWc7GpOaZw/viewform?embedded=true" width="450" height="700" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>

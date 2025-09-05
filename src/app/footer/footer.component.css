@@ -35,6 +35,16 @@
     font-size: clamp(0.875rem, 2vw, 1rem);
     margin: 0.5rem 0;
   }
+   .copyright {
+    background-color: #3b4045;
+    color: whitesmoke;
+    height: 3.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  }
+  
   
   /* 響應式設計 */
 

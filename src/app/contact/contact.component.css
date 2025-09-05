@@ -81,10 +81,10 @@
     display: flex;
     justify-content: space-around;
   }
-  .contacearea{
+  .contactarea{
     width: 50%;
   }
-  .contaceform{
+  .contactform{
      width: 30%;
       display: flex;
     align-items: center;
@@ -166,6 +166,7 @@
     .photos img {
       max-width: 100%;
     }
+    
   }
   
   @media (max-width: 480px) {
@@ -186,6 +187,51 @@
     .photos img {
       max-width: 100%;
     }
+    .contactus{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .contactarea{
+      width: 80%;
+      padding: 20px;
+      text-align: left;
+      font-size: 20px;
+    }
+    .contactform{
+      width: 90%;
+    }
+   
+    .contact_item{
+      font-size: 16px;
+      text-align: left;
+    }
+    .joinus{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .joinusarea{
+      width: 80%;
+      padding: 20px;
+      text-align: left;
+      font-size: 20px;
+    }
+    .join_item{
+      font-size: 16px;
+      text-align: left;
+    }
+     .joinform{
+      width: 90%;
+      margin-top: 0px;
+    }
+    
+   
+    
   }
   
  
