@@ -1,18 +1,3 @@
-<!-- <div class="navbar" [ngClass]="{'scrolled': isScrolled}">
-  <div class="navlogo">
-    <img src='../../assets/images/nobg.png' alt="">
-    <div class="title">
-        業 順 營 造
-    </div>
-  </div>
-  <div class="item" >
-    <a class="nav_item" href="#">HOME</a>
-    <a class="nav_item" href="#">PROTFOLIO</a>
-    <a class="nav_item" href="#">PROCESS</a>
-    <a class="nav_item" href="#">CONTACT</a>
-  </div>
-
-</div> -->
 <div class="navbar" [ngClass]="{'scrolled': isScrolled}">
   <div class="navlogo">
     <img src="../../assets/images/nobg.png" alt="Logo">
@@ -26,9 +11,10 @@
   </button>
   <!-- 導航項目 -->
   <div class="item" [ngClass]="{'active': isMenuOpen}">
-    <a class="nav_item" href="#home" (click)="closeMenu()">HOME</a>
-    <a class="nav_item" href="#portfolio" (click)="closeMenu()">PORTFOLIO</a>
-    <a class="nav_item" href="#process" (click)="closeMenu()">PROCESS</a>
-    <a class="nav_item" href="#contact" (click)="closeMenu()">CONTACT</a>
+    <a class="nav_item" [routerLink]="['/home']" (click)="closeMenu()">HOME</a>
+    <a class="nav_item" [routerLink]="['/portfolio']" (click)="closeMenu()">PORTFOLIO</a>
+    <a class="nav_item" [routerLink]="['/process']" (click)="closeMenu()">PROCESS</a>
+    <a class="nav_item" [routerLink]="['/contact']" (click)="closeMenu()">CONTACT</a>
   </div>
 </div>
+<router-outlet></router-outlet>
