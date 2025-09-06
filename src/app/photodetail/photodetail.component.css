@@ -136,9 +136,14 @@
       margin: auto;
       height: 300px;
       width: 300px;
+      margin-bottom: 20px;
     }
     .photodetail-content{
       min-height: 0vh;
+    }
+    .statement{
+      padding: 20px;
+      text-align: center;
     }
   }
 
