@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .home-container {
     display: flex;
     flex-direction: column;
@@ -11,7 +14,7 @@
     background: transparent;
     overflow: hidden; /* 防止背景圖溢出 */
   }
-  
+
   .nav::before {
     content: "";
     background-image: url('/assets/images/navbg03.jpg');
@@ -27,7 +30,7 @@
     z-index: -1;
     animation: owl 15s ease-in-out infinite; /* 改進動畫為平滑循環 */
   }
-  
+
   @keyframes owl {
     0% {
       transform: scale(1);
@@ -39,7 +42,7 @@
       transform: scale(1); /* 回到原始尺寸，形成呼吸效果 */
     }
   }
-  
+
   .home-content {
     flex: 1;
     padding: 2rem;
@@ -48,14 +51,14 @@
     font-weight: 500;
     font-size: clamp(1.5rem, 4vw, 1.875rem);
   }
-  
+
   .content_title {
     font-family: "Microsoft JhengHei", Arial, sans-serif;
     position: relative;
     padding-left: 2rem;
     margin-top: 2rem;
   }
-  
+
   .content_title::before {
     content: "";
     position: absolute;
@@ -74,21 +77,21 @@
     font-size: 25px;
     padding-left: 1rem;
   }
-  
+
   .content_middle {
     padding: 0.625rem 0.625rem 0.625rem 2.5rem;
     font-size: 20px;
     color: rgb(195, 162, 127);
-    
+
   }
    .content_middle>p{
       padding-bottom: 25px;
     }
-  
+
   .company_create {
     width: 90%;
     margin: 0 auto;
-    
+
     font-family: "Microsoft JhengHei", Arial, sans-serif;
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     font-weight: 500;
@@ -102,8 +105,9 @@
   align-items: center;
   gap: 1rem;
   width: 100%;
-  max-width: 1200px; /* 限制最大寬度 */
+  max-width: 100%; /* 限制最大寬度 */
   margin: 1rem auto;
+  padding: 0 0.5rem;
 }
 
 .company_env img {
@@ -113,8 +117,8 @@
   object-fit: cover;
   border-radius: 8px; /* 可選：添加圓角 */
 }
-  
-  
+
+
 .home-footer {
     width: 100%;
     padding: 0;
@@ -123,7 +127,7 @@
     background:  #2B2B2B;
     /* background:linear-gradient(to bottom, #3B4045, #2B2B2B); */
   }
-  
+
   .copyright {
     background-color: #3b4045;
     color: whitesmoke;
@@ -133,7 +137,7 @@
     justify-content: center;
     font-size: clamp(0.875rem, 2vw, 1rem);
   }
-  
+
   /* 響應式設計 */
 
    @media (max-width:1920px){
@@ -151,7 +155,7 @@
     .nav {
       height: 200px;
     }
-  
+
     .home-content {
       padding: 1rem;
       font-size: clamp(1.25rem, 3.5vw, 1.5rem);
@@ -166,7 +170,7 @@
       line-height: 2em;
     }
   }
-  
+
   @media (max-width: 480px) {
     .nav {
       height: 150px;
@@ -195,7 +199,7 @@
       text-align: center;
       padding-top: 20px;
      }
-   
+
     .company_env{
     display: flex;
    flex-direction: column;

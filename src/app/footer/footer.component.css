@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}s
 .footer {
     display: flex;
     width: 100%;
@@ -6,30 +9,30 @@
     align-items: center;
     background-color: #1a1a1a;
   }
-  
+
   .footer_left {
     display: flex;
     width: 100%;
     max-width: 600px;
     align-items: center;
   }
-  
+
   .footer_logo {
     text-align: center;
     width: 40%;
   }
-  
+
   .footer_logo > img {
     max-width: 60%;
     height: auto;
   }
-  
+
   .footer_info {
     width: 50%;
     text-align: left;
     padding-left: 1rem;
   }
-  
+
   .footer_info > p {
     color: rgb(195, 162, 127);
     font-size: clamp(0.875rem, 2vw, 1rem);
@@ -44,8 +47,8 @@
     justify-content: center;
     font-size: clamp(0.875rem, 2vw, 1rem);
   }
-  
-  
+
+
   /* 響應式設計 */
 
    @media (max-width:1920px){
@@ -79,7 +82,7 @@
       margin-top: 1rem;
     }
   }
-  
+
   @media (max-width: 480px) {
     .footer {
       width: 100%;
