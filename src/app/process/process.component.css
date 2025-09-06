@@ -1,10 +1,13 @@
+* {
+  box-sizing: border-box;
+}
 .process-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     box-sizing: border-box;
   }
-  
+
   .nav {
     width: 100%;
     position: relative;
@@ -12,7 +15,7 @@
     background: transparent;
     overflow: hidden; /* 防止背景圖溢出 */
   }
-  
+
   .nav::before {
     content: "";
     background-image: url('/assets/images/navbg14.jpg');
@@ -63,7 +66,7 @@
     background:  #2B2B2B;
     /* background:linear-gradient(to bottom, #3B4045, #2B2B2B); */
   }
-  
+
 .copyright {
     background-color: #3b4045;
     color: whitesmoke;
@@ -73,7 +76,7 @@
     justify-content: center;
     font-size: clamp(0.875rem, 2vw, 1rem);
   }
-  
+
   @media (max-width:1920px){
     .process-content{
       display: flex;
@@ -90,16 +93,16 @@
     .process-content {
       padding: 1rem;
       font-size: clamp(1.25rem, 3.5vw, 1.5rem);
-      
+
     }
-   
+
   }
-  
+
   @media (max-width: 480px) {
     .nav {
       height: 150px;
     }
-   
+
     .process-content {
       display: block;
       padding: 0.5rem;
