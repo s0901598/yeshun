@@ -1,6 +1,8 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {HostListener } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 
 @Component({
@@ -26,11 +28,13 @@ export class NavbarComponent implements OnInit {
     this.isScrolled = window.scrollY > 50; // 當滾動超過50px時觸發
   }
 
-  constructor(private viewportScroller: ViewportScroller) { }
+  constructor(private viewportScroller: ViewportScroller,private router:Router) { }
 
   ngOnInit(): void {
-    this.viewportScroller.scrollToPosition([0,0])
-    
+    this.router.events
+        .subscribe((event) => {
+         this.viewportScroller.scrollToPosition([0,0])
+        });
   }
 
 }
