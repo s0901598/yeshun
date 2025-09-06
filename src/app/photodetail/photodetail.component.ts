@@ -9,27 +9,52 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./photodetail.component.css']
 })
 export class PhotodetailComponent implements OnInit {
-  selectedPhoto: { url: string, alt: string } | null = null;
+  selectedPhotos:any = null;
   photos = [
+    {name:'住宅空間',
+      photos:[
     { url: '/assets/images/navbg02.jpg', alt: 'Photo 1' },
     { url: '/assets/images/navbg03.jpg', alt: 'Photo 2' },
     { url: '/assets/images/navbg04.jpg', alt: 'Photo 3' },
     { url: '/assets/images/navbg05.jpg', alt: 'Photo 4' },
-   
+    ]
+    },
+    {name:'商業空間',
+      photos:[
+    { url: '/assets/images/navbg03.jpg', alt: 'Photo 1' },
+    { url: '/assets/images/navbg04.jpg', alt: 'Photo 2' },
+    { url: '/assets/images/navbg05.jpg', alt: 'Photo 3' },
+    { url: '/assets/images/navbg02.jpg', alt: 'Photo 4' },
+    ]
+  },
+    {name:'辦公空間',
+      photos:[
+    { url: '/assets/images/navbg04.jpg', alt: 'Photo 1' },
+    { url: '/assets/images/navbg03.jpg', alt: 'Photo 2' },
+    { url: '/assets/images/navbg04.jpg', alt: 'Photo 3' },
+    ]},
+      {name:'公共空間',
+      photos:[
+    { url: '/assets/images/navbg02.jpg', alt: 'Photo 1' },
+    { url: '/assets/images/navbg03.jpg', alt: 'Photo 2' },
+    { url: '/assets/images/navbg04.jpg', alt: 'Photo 3' },
+    { url: '/assets/images/navbg05.jpg', alt: 'Photo 4' },
+     { url: '/assets/images/navbg02.jpg', alt: 'Photo 1' }
+    ]}
+
   ];
- 
+
 
   constructor(private route: ActivatedRoute, private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      const url = decodeURIComponent(params.get('url') || '沒有');
-      console.log(url)
+      const id = decodeURIComponent(params.get('name') || '沒有');
       // 查找對應的照片
-      this.selectedPhoto = this.photos.find(photo => photo.url === url) || this.photos[1]; // 默認顯示第一張
+      this.selectedPhotos = this.photos.filter(x=>x.name ==id)[0]
+      console.log(this.selectedPhotos)
       this.viewportScroller.scrollToPosition([0, 0]); // 滾動到頂部
-      console.log(this.selectedPhoto)
     });
-    
+
   }
 }

@@ -5,8 +5,7 @@
   <div class="photodetail-content">
 
     <div class="photos">
-      <img *ngIf="selectedPhoto" [src]="selectedPhoto.url" [alt]="selectedPhoto.alt">
-      <div *ngIf="!selectedPhoto" class="no-photo">未找到對應的圖片。</div>
+      <img *ngFor="let photo of selectedPhotos.photos" [src]="photo.url" [alt]="photo.alt">
     </div>
     <div class="statement">
       <div class="title">
