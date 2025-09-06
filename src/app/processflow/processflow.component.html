@@ -1,12 +1,15 @@
-<div class="flow-card" *ngFor="let work of service;"  >
-    <div class="flow-number" > {{ work.no}} </div>
+<div class="process_step">
+  <p class="process_title">{{flows.flowName}}</p>
+  <div class="flow-card" *ngFor="let work of flows.services;">
+    <div class="flow-number"> {{ work.no}} </div>
     <div class="vertical-line"></div>
-    <div class="service_item"  >
+    <div class="service_item">
       <div class="title">
-        {{work.title}}  
-      </div> 
+        {{work.title}}
+      </div>
       <div class="subtitle">
-         {{work.subtitle}}  
+        {{work.subtitle}}
       </div>
     </div>
+  </div>
 </div>

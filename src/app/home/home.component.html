@@ -1,34 +1,35 @@
 <div class="home-container">
-    <div class="nav">
-      <app-navbar></app-navbar>
+  <div class="nav">
+    <!-- <app-navbar></app-navbar> -->
+  </div>
+  <div class="home-content">
+    <div class="content_title">
+      <p class="title">關於業順</p>
+      <hr>
+      <h5 class="about">
+        業順營造有限公司
+      </h5>
+      <div class="content_middle">
+        <p>▸建築物室內裝修專業設計、施工廠商</p>
+        <p>▸內營室業字第</p>
+        <p>▸符合建築物室內裝修管理辦法第十條或第十一條規定資格</p>
+      </div>
+      <hr>
     </div>
-    <div class="home-content">
-        <div class="content_title">
-           <p class="title">關於業順</p> 
-            <hr >
-            <h5 class="about">
-                業順營造有限公司
-            </h5>
-            <div class="content_middle">
-                <p>▸建築物室內裝修專業設計、施工廠商</p>
-                <p>▸內營室業字第</p>
-                <p>▸符合建築物室內裝修管理辦法第十條或第十一條規定資格</p>
-            </div>
-            <hr >
-        </div>
-        <div class="company_create">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, dolorem aspernatur corporis praesentium quos ipsam error a quod sunt numquam nihil enim officiis quas ad magnam pariatur cumque? Repudiandae, ratione
-        </div>
-        <div class="company_env">
-            <img  *ngFor="let photo of photos" [src]="photo.url" >
-        </div>
-       
-        
-      
+    <div class="company_create">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, dolorem aspernatur corporis praesentium
+      quos ipsam error a quod sunt numquam nihil enim officiis quas ad magnam pariatur cumque? Repudiandae, ratione
     </div>
-    <!-- <div class="home-footer">
+    <div class="company_env">
+      <img *ngFor="let photo of photos" [src]="photo.url">
+    </div>
+
+
+
+  </div>
+  <!-- <div class="home-footer">
         <app-footer></app-footer>
-     
+
     </div>
     <div class="copyright">©2025 ye-shun company copyright</div> -->
 </div>

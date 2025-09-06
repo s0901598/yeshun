@@ -1,19 +1,14 @@
-<div class="process-container" >
-    <div class="nav">
-      <app-navbar></app-navbar>
+<div class="process-container">
+  <div class="nav">
+    <!-- <app-navbar></app-navbar> -->
+  </div>
+  <div class="process-content">
+    <div *ngFor="let flow of processFlows">
+      <app-processflow [flows]="flow"> </app-processflow>
     </div>
-    <div class="process-content">
-        <div class="process_step">
-          <p class="process_title">服務流程</p>
-          <app-processflow class="process_item" > </app-processflow>
-        </div>
-        <div class="step_detail">
-          <p class="process_title">工程流程</p>
-           <app-processdetail class="process_item" > </app-processdetail>
-        </div>
-    </div>
-    <!-- <div class="process-footer">
+  </div>
+  <!-- <div class="process-footer">
         <app-footer></app-footer>
       <div class="copyright">©2025 ye-shun company copyright</div>
     </div> -->
-  </div>
+</div>

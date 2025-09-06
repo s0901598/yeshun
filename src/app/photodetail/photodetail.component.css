@@ -1,10 +1,10 @@
 .photodetail-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     box-sizing: border-box;
   }
-  
+
   .nav {
     width: 100%;
     position: relative;
@@ -12,7 +12,7 @@
     background: transparent;
     overflow: hidden;
   }
-  
+
   .nav::before {
     content: "";
     background-image: url('/assets/images/navbg13.jpg');
@@ -28,7 +28,7 @@
     z-index: -1;
     animation: owl 15s ease-in;
   }
-  
+
   @keyframes owl {
     0% {
       transform: scale(1);
@@ -40,7 +40,7 @@
       transform: scale(1);
     }
   }
-  
+
   .copyright {
     background-color: #3b4045;
     color: whitesmoke;
@@ -50,7 +50,7 @@
     justify-content: center;
     font-size: clamp(0.875rem, 2vw, 1rem);
   }
-  
+
   .photodetail-content {
     flex: 1;
     padding: 2rem;
@@ -60,9 +60,9 @@
     font-size: clamp(1.5rem, 4vw, 1.875rem);
     display: flex;
     justify-content: space-between;
-    min-height: 100vh; /* 確保內容區有足夠高度測試滾動 */
+    /* min-height: 100vh; 確保內容區有足夠高度測試滾動 */
   }
-  
+
   .statement {
     width: 40%;
     padding-right: 1rem;
@@ -72,31 +72,31 @@
     max-height: calc(100vh - 5rem); /* 防止溢出 */
     overflow-y: auto; /* 若內容過長則滾動 */
   }
-  
+
   .title {
     font-size: clamp(1.5rem, 4vw, 2rem);
     font-family: "Microsoft JhengHei", Arial, sans-serif;
     color: rgb(195, 162, 127);
   }
-  
+
   .content {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     margin-top: 1rem;
     color: rgb(195, 162, 127);
   }
-  
+
   .photos {
-    width: 60%;
+    width: 50%;
     padding-left: 1rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: right;
   }
-  
+
   .photos img {
     max-width: 70%;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     margin-bottom: 1rem;
     display: block;
     border-radius: 20px ;
@@ -108,7 +108,7 @@
     color: #ffffff;
     background: #2B2B2B;
   }
-  
+
   /* 響應式設計 */
   @media (max-width: 768px) {
     .nav {
@@ -122,17 +122,23 @@
     .statement,
     .photos {
       width: 100%;
-      padding: 0;
+      padding: 20px 0pc 10px 0px;
     }
     .statement {
       position: static; /* 平板上取消黏性 */
       top: auto;
     }
     .photos img {
-      max-width: 100%;
+      max-width: 80%;
+      margin: auto;
+      height: 300px;
+      width: 300px;
+    }
+    .photodetail-content{
+      min-height: 0vh;
     }
   }
-  
+
   @media (max-width: 480px) {
     .nav {
       height: 150px;
@@ -151,6 +157,6 @@
     .photos img {
       max-width: 100%;
     }
+
   }
-  
- 
+
