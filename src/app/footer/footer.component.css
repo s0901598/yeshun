@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-}s
+  background-color: #1a1a1a;
+}
 .footer {
     display: flex;
     width: 100%;

@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .photodetail-container {
     display: flex;
     flex-direction: column;
