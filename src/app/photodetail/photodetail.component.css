@@ -1,170 +1,220 @@
 * {
   box-sizing: border-box;
 }
+
 .photodetail-container {
-    display: flex;
-    flex-direction: column;
-    /* min-height: 100vh; */
-    box-sizing: border-box;
-  }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 確保頁面有足夠高度可滾動 */
+}
 
+.nav {
+  width: 100%;
+  position: relative;
+  height: 400px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.nav::before {
+  content: "";
+  background-image: url('/assets/images/navbg13.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  display: block;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: owl 15s ease-in;
+}
+
+@keyframes owl {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.copyright {
+  background-color: #3b4045;
+  color: whitesmoke;
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+.photodetail-content {
+  flex: 1;
+  padding: 2rem;
+  background: #2b2b2b;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 4vw, 1.875rem);
+  display: flex;
+  justify-content: space-between;
+}
+
+.statement {
+  width: 40%;
+  padding-right: 1rem;
+  position: sticky;
+  top: 5rem;
+  align-self: flex-start;
+  max-height: calc(100vh - 5rem);
+  overflow-y: auto;
+}
+
+.title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-family: "Microsoft JhengHei", Arial, sans-serif;
+  color: rgb(195, 162, 127);
+}
+
+.content {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  margin-top: 1rem;
+  color: rgb(195, 162, 127);
+}
+
+.photos {
+  width: 50%;
+  padding-left: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+}
+
+.photos img {
+  max-width: 70%;
+  width: 450px;
+  height: 450px;
+  margin-bottom: 1rem;
+  display: block;
+  border-radius: 20px;
+}
+
+.photodetail-footer {
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  color: #ffffff;
+  background: #2b2b2b;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
   .nav {
-    width: 100%;
-    position: relative;
-    height: 400px;
-    background: transparent;
-    overflow: hidden;
+    height: 200px;
   }
-
-  .nav::before {
-    content: "";
-    background-image: url('/assets/images/navbg13.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-    display: block;
-    opacity: 0.9;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    animation: owl 15s ease-in;
-  }
-
-  @keyframes owl {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  .copyright {
-    background-color: #3b4045;
-    color: whitesmoke;
-    height: 3.125rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(0.875rem, 2vw, 1rem);
-  }
-
   .photodetail-content {
-    flex: 1;
-    padding: 2rem;
-    background: #2b2b2b;
-    color: #ffffff;
-    font-weight: 500;
-    font-size: clamp(1.5rem, 4vw, 1.875rem);
-    display: flex;
-    justify-content: space-between;
-    /* min-height: 100vh; 確保內容區有足夠高度測試滾動 */
+    padding: 1rem;
+    font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+    flex-direction: column;
   }
-
-  .statement {
-    width: 40%;
-    padding-right: 1rem;
-    position: sticky;
-    top: 5rem; /* 留出 navbar 空間 */
-    align-self: flex-start; /* 確保黏性定位正確 */
-    max-height: calc(100vh - 5rem); /* 防止溢出 */
-    overflow-y: auto; /* 若內容過長則滾動 */
-  }
-
-  .title {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    font-family: "Microsoft JhengHei", Arial, sans-serif;
-    color: rgb(195, 162, 127);
-  }
-
-  .content {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    margin-top: 1rem;
-    color: rgb(195, 162, 127);
-  }
-
+  .statement,
   .photos {
-    width: 50%;
-    padding-left: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: right;
-  }
-
-  .photos img {
-    max-width: 70%;
-    width: 450px;
-    height: 450px;
-    margin-bottom: 1rem;
-    display: block;
-    border-radius: 20px ;
-  }
-  .photodetail-footer {
     width: 100%;
-    padding: 0;
+    padding: 20px 0 10px 0;
+  }
+  .statement {
+    position: static;
+    top: auto;
+  }
+  .photos img {
+    max-width: 80%;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  .photodetail-content {
+    min-height: auto; /* 避免限制滾動 */
+  }
+  .statement {
+    padding: 20px;
     text-align: center;
-    color: #ffffff;
-    background: #2B2B2B;
   }
+}
 
-  /* 響應式設計 */
-  @media (max-width: 768px) {
-    .nav {
-      height: 200px;
-    }
-    .photodetail-content {
-      padding: 1rem;
-      font-size: clamp(1.25rem, 3.5vw, 1.5rem);
-      flex-direction: column;
-    }
-    .statement,
-    .photos {
-      width: 100%;
-      padding: 20px 0pc 10px 0px;
-    }
-    .statement {
-      position: static; /* 平板上取消黏性 */
-      top: auto;
-    }
-    .photos img {
-      max-width: 80%;
-      margin: auto;
-      height: 300px;
-      width: 300px;
-      margin-bottom: 20px;
-    }
-    .photodetail-content{
-      min-height: 0vh;
-    }
-    .statement{
-      padding: 20px;
-      text-align: center;
-    }
+@media (max-width: 480px) {
+  .nav {
+    height: 150px;
   }
-
-  @media (max-width: 480px) {
-    .nav {
-      height: 150px;
-    }
-    .photodetail-content {
-      padding: 0.5rem;
-      font-size: clamp(1rem, 3vw, 1.25rem);
-    }
-    .nav::before {
-      animation: owl 10s ease-in-out infinite;
-    }
-    .statement,
-    .photos {
-      width: 100%;
-    }
-    .photos img {
-      max-width: 100%;
-    }
-
+  .photodetail-content {
+    padding: 0.5rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
   }
+  .nav::before {
+    animation: owl 10s ease-in-out infinite;
+  }
+  .statement,
+  .photos {
+    width: 100%;
+  }
+  .photos img {
+    max-width: 100%;
+  }
+}
 
+.book-container {
+  perspective: 1000px;
+  width: 800px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.single-page {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.double-page-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.left-page-container, .right-page-container {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+}
+
+.front-page, .back-page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.back-page {
+  transform: rotateY(180deg);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
