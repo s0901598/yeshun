@@ -1,6 +1,8 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, OnInit, } from '@angular/core';
+import { Component, OnInit,HostListener, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
 @Component({
@@ -9,6 +11,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./photodetail.component.css']
 })
 export class PhotodetailComponent implements OnInit {
+
+
+
   selectedPhotos:any = null;
   photos = [
     {name:'住宅空間',
@@ -45,9 +50,12 @@ export class PhotodetailComponent implements OnInit {
   ];
 
 
-  constructor(private route: ActivatedRoute, private viewportScroller: ViewportScroller) { }
+  constructor(private route: ActivatedRoute, private viewportScroller: ViewportScroller,private cdr:ChangeDetectorRef) {
+    gsap.registerPlugin(ScrollTrigger);
+   }
 
   ngOnInit(): void {
+
     this.route.paramMap.subscribe(params => {
       const id = decodeURIComponent(params.get('name') || '沒有');
       // 查找對應的照片
@@ -57,4 +65,11 @@ export class PhotodetailComponent implements OnInit {
     });
 
   }
+
+
+
+
+
+
+
 }
