@@ -17,7 +17,7 @@ export class TestComponent implements OnInit {
   panelCount = 5;
   isScrolling = false;
   scrollAccumulator = 0;
-  scrollThreshold = 100;
+  scrollThreshold = 80;
 
   @HostListener('wheel', ['$event'])
   onWheel(event: WheelEvent) {

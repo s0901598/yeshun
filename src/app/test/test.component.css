@@ -5,7 +5,6 @@
 
 .outer-container {
   width: 50%;
-  margin: 0 auto;
   height: 100vh;
   overflow: hidden;
 }
@@ -22,7 +21,7 @@
 
 .panel {
   width: 100%; /* 每個面板寬度等於外層容器 */
-  height: 100vh;
+  height: 50vh;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
