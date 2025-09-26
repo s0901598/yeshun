@@ -1,12 +1,19 @@
+<<<<<<< HEAD
 import { Component, HostListener } from '@angular/core';
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> 3171bd72e12734f23e4d4184de0ec4af3c12780a
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  loadingmask:boolean = true;
   title = 'yeshunweb';
+<<<<<<< HEAD
   private touchStartX: number = 0;
 
   // 監聽 touchstart 事件，記錄觸摸起始位置
@@ -28,5 +35,12 @@ export class AppComponent {
     ) {
       event.preventDefault();
     }
+=======
+   ngOnInit(): void {
+      setTimeout(()=> {
+        this.loadingmask = false;
+        document.body.style.overflow = 'auto'
+      },5000);
+>>>>>>> 3171bd72e12734f23e4d4184de0ec4af3c12780a
   }
 }

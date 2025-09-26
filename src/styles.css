@@ -7,7 +7,11 @@
 }body{
   -webkit-overflow-scrolling: touch;  /* 改善 iOS 滾動平滑 */
   touch-action: pan-y;  /* 限制觸摸事件，防止偏移 */
+<<<<<<< HEAD
   overscroll-behavior-x: none;
+=======
+  overflow: hidden;
+>>>>>>> 3171bd72e12734f23e4d4184de0ec4af3c12780a
 }
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Bytesized&family=Chiron+GoRound+TC:wght@200..900&family=Dancing+Script:wght@400..700&family=LXGW+WenKai+TC&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Arabic:wght@100..900&family=Noto+Sans+Canadian+Aboriginal:wght@100..900&family=Noto+Sans+Gunjala+Gondi:wght@400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Yuji+Syuku&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Bytesized&family=Chiron+GoRound+TC:wght@200..900&family=Dancing+Script:wght@400..700&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Arabic:wght@100..900&family=Noto+Sans+Canadian+Aboriginal:wght@100..900&family=Noto+Sans+Gunjala+Gondi:wght@400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');

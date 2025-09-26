@@ -18,7 +18,11 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+<<<<<<< HEAD
     "page-flip": "^2.0.7",
+=======
+    "gsap": "^3.13.0",
+>>>>>>> 3171bd72e12734f23e4d4184de0ec4af3c12780a
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

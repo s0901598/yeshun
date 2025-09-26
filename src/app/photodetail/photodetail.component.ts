@@ -1,7 +1,13 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ViewportScroller } from '@angular/common';
+<<<<<<< HEAD
 import { ChangeDetectorRef, Component, HostListener, OnInit, } from '@angular/core';
+=======
+import { Component, OnInit,HostListener, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
+>>>>>>> 3171bd72e12734f23e4d4184de0ec4af3c12780a
 import { ActivatedRoute } from '@angular/router';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 
 @Component({
@@ -22,6 +28,9 @@ import { ActivatedRoute } from '@angular/router';
     ]
 })
 export class PhotodetailComponent implements OnInit {
+
+
+
   selectedPhotos:any = null;
   photos = [
     {name:'住宅空間',
@@ -86,6 +95,7 @@ export class PhotodetailComponent implements OnInit {
 
     if (Math.abs(event.deltaY) < 5) return; // 提高閾值，降低敏感度
 
+<<<<<<< HEAD
     this.isFlipping = true;
     setTimeout(() => {
       this.isFlipping = false;
@@ -196,8 +206,14 @@ export class PhotodetailComponent implements OnInit {
   }
 
   constructor(private route: ActivatedRoute, private viewportScroller: ViewportScroller,private cdr: ChangeDetectorRef) { }
+=======
+  constructor(private route: ActivatedRoute, private viewportScroller: ViewportScroller,private cdr:ChangeDetectorRef) {
+    gsap.registerPlugin(ScrollTrigger);
+   }
+>>>>>>> 3171bd72e12734f23e4d4184de0ec4af3c12780a
 
   ngOnInit(): void {
+
     this.route.paramMap.subscribe(params => {
       const id = decodeURIComponent(params.get('name') || '沒有');
       // 查找對應的照片
@@ -207,4 +223,11 @@ export class PhotodetailComponent implements OnInit {
     });
 
   }
+
+
+
+
+
+
+
 }

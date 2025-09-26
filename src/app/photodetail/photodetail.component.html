@@ -5,6 +5,7 @@
   <div class="photodetail-content">
 
     <div class="photos">
+<<<<<<< HEAD
       
       <div class="book-container">
   <ng-container *ngIf="isSinglePage && currentPageIndex === 0; else doublePage">
@@ -33,6 +34,10 @@
     </div>
   </ng-template>
 </div>
+=======
+      <img *ngFor="let photo of selectedPhotos.photos" [src]="photo.url" [alt]="photo.alt">
+
+>>>>>>> 3171bd72e12734f23e4d4184de0ec4af3c12780a
     </div>
     <div class="statement">
       <div class="title">

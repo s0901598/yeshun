@@ -11,7 +11,11 @@ import { ProcessComponent } from './process/process.component';
 import { ProcessflowComponent } from './processflow/processflow.component';
 import { ContactComponent } from './contact/contact.component';
 import { ImagecardComponent } from './imagecard/imagecard.component';
+<<<<<<< HEAD
 import { TestfilpComponent } from './testfilp/testfilp.component';
+=======
+import { TestComponent } from './test/test.component';
+>>>>>>> 3171bd72e12734f23e4d4184de0ec4af3c12780a
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { TestfilpComponent } from './testfilp/testfilp.component';
     ProcessflowComponent,
     ContactComponent,
     ImagecardComponent,
+<<<<<<< HEAD
     TestfilpComponent,
+=======
+    TestComponent,
+>>>>>>> 3171bd72e12734f23e4d4184de0ec4af3c12780a
   ],
   imports: [
     BrowserModule,
