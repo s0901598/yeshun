@@ -1,27 +1,7 @@
-<div class="horizontal-scroll-wrapper">
-  <!-- 添加按钮 -->
-  <div class="controls">
-    <button #addButton class="add-btn" type="button">
-      Add Section ({{ sections.length + 1 }})
-    </button>
-    <button class="reset-btn" type="button" (click)="resetAnimation()">
-      Reset
-    </button>
-    <div class="info">
-      Sections: {{ sections.length }}
+<div class="outer-container">
+  <div class="container" [style.transform]="getTransform()">
+    <div class="panel" *ngFor="let panel of panels; let i = index" [ngClass]="'panel-' + (i + 1)">
+      {{ panel }}
     </div>
-  </div>
-
-  <!-- 滚动容器 -->
-  <div #container class="container" [attr.id]="'scroll-container-' + sections.length">
-    <!-- 初始sections -->
-    <section class="panel blue">
-      <img src="./assets/images/logo.png" alt="">
-    </section>
-    <section class="panel orange">
-      <h2>2</h2>
-    </section>
-
-    <!-- 动态添加的sections会通过JavaScript插入 -->
   </div>
 </div>
