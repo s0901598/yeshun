@@ -23,6 +23,15 @@ export class PhotodetailComponent implements OnInit {
     this.scrollPercentage = totalHeight > 0 ? (scrollPosition / totalHeight) * 100 : 0;
     console.log('當前卷軸百分比:', this.scrollPercentage.toFixed(1) + '%');
 
+
+
+    if(this.scrollPercentage>=40 && this.scrollPercentage<=80) {
+      this.isScrolling = true;
+    }
+    else if(this.scrollPercentage >80) {
+      this.isScrolling = false;
+    }
+
   }
 
 
@@ -65,6 +74,9 @@ export class PhotodetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private viewportScroller: ViewportScroller,private cdr:ChangeDetectorRef) {
     gsap.registerPlugin(ScrollTrigger);
+    this.route.params.subscribe(x=>{
+      console.log(x);
+    })
    }
 
   ngOnInit(): void {
@@ -86,9 +98,15 @@ export class PhotodetailComponent implements OnInit {
 
   @HostListener('wheel', ['$event'])
   onWheel(event: WheelEvent) {
-    event.preventDefault();
+event.preventDefault();
+    if(!this.isScrolling){
+        event.preventDefault();
+    }
 
-    if (this.isScrolling) return;
+    // if (this.isScrolling){
+    // event.preventDefault();
+    //   return;
+    // }
 
     this.scrollAccumulator += event.deltaY;
 
@@ -103,9 +121,9 @@ export class PhotodetailComponent implements OnInit {
 
       this.scrollAccumulator = 0;
 
-      setTimeout(() => {
-        this.isScrolling = false;
-      }, 1000);
+      // setTimeout(() => {
+      //   this.isScrolling = false;
+      // }, 1000);
     }
   }
 

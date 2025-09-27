@@ -7,8 +7,9 @@
     <div class="photos">
       <div class="outer-container">
         <div class="container" [style.transform]="getTransform()">
-          <div class="panel" *ngFor="let panel of panels; let i = index" [ngClass]="'panel-' + (i + 1)">
-            {{ panel }}
+          <div class="panel" *ngFor="let photo of this.selectedPhotos.photos; let i = index"
+            [ngClass]="'panel-' + (i + 1)">
+            <img [src]="photo.url">
           </div>
         </div>
       </div>
