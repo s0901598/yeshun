@@ -11,6 +11,19 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
   styleUrls: ['./photodetail.component.css']
 })
 export class PhotodetailComponent implements OnInit {
+ scrollPercentage: number = 0;
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event: Event) {
+    // 取得當前卷軸位置
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    // 取得頁面總高度
+    const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // 計算百分比
+    this.scrollPercentage = totalHeight > 0 ? (scrollPosition / totalHeight) * 100 : 0;
+    console.log('當前卷軸百分比:', this.scrollPercentage.toFixed(1) + '%');
+
+  }
 
 
 
