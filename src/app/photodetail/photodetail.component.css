@@ -168,3 +168,51 @@
 
   }
 
+.outer-container {
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 500%; /* 5個面板，每個100% */
+  height: 100vh;
+  transition: transform 1s ease-out;
+  will-change: transform;
+  max-width: 100%;
+}
+
+.panel {
+  width: 100%; /* 每個面板寬度等於外層容器 */
+  height: 50vh;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: white;
+  position: relative;
+  max-width: 100%;
+}
+
+.panel-1 {
+  background-color: #ff6b6b;
+}
+
+.panel-2 {
+  background-color: #4ecdc4;
+}
+
+.panel-3 {
+  background-color: #45b7d1;
+}
+
+.panel-4 {
+  background-color: #f7b731;
+}
+
+.panel-5 {
+  background-color: #5f27cd;
+}

@@ -64,9 +64,42 @@ export class PhotodetailComponent implements OnInit {
       this.viewportScroller.scrollToPosition([0, 0]); // 滾動到頂部
     });
 
+  } panels = ['Panel 1', 'Panel 2', 'Panel 3', 'Panel 4', 'Panel 5'];
+  currentIndex = 0;
+  panelCount = 5;
+  isScrolling = false;
+  scrollAccumulator = 0;
+  scrollThreshold = 80;
+
+  @HostListener('wheel', ['$event'])
+  onWheel(event: WheelEvent) {
+    event.preventDefault();
+
+    if (this.isScrolling) return;
+
+    this.scrollAccumulator += event.deltaY;
+
+    if (Math.abs(this.scrollAccumulator) >= this.scrollThreshold) {
+      if (this.scrollAccumulator > 0 && this.currentIndex < this.panelCount - 1) {
+        this.currentIndex++;
+        this.isScrolling = true;
+      } else if (this.scrollAccumulator < 0 && this.currentIndex > 0) {
+        this.currentIndex--;
+        this.isScrolling = true;
+      }
+
+      this.scrollAccumulator = 0;
+
+      setTimeout(() => {
+        this.isScrolling = false;
+      }, 1000);
+    }
   }
 
 
+getTransform(): string {
+    return `translateX(-${this.currentIndex * 100}%)`;
+  }
 
 
 
